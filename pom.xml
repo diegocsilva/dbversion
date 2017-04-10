@@ -31,13 +31,13 @@
         <wildfly-maven-plugin.version>1.1.0.Alpha5</wildfly-maven-plugin.version>
     </properties>
 
-    <repositories>
+<!--    <repositories>
         <repository>
             <id>prime-repo</id>
             <name>Prime Repo</name>
             <url>http://repository.primefaces.org</url>
         </repository>
-    </repositories>
+    </repositories>-->
     
     <dependencies>
         <!-- Servlet -->
@@ -62,7 +62,7 @@
         </dependency>
         <dependency>
             <groupId>org.primefaces.themes</groupId>
-            <artifactId>all-themes</artifactId>
+            <artifactId>bootstrap</artifactId>
             <version>1.0.10</version>
         </dependency>
         <!-- CDI -->

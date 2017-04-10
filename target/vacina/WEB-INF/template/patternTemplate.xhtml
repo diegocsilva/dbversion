@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet library="customthemes" name="bootstrap.min.css"/>
+        <h:outputStylesheet library="customthemes" name="Flatly.css"/>
+        <!--<h:outputStylesheet library="css" name="default.css"/>-->
+        <!--<h:outputStylesheet library="css" name="cssLayout.css"/>-->
+        <h:outputScript library="javascript" name="primefaces.locale.js" />
+        <title>DB-VERSION{#}</title>
+        <!--<link rel="shortcut icon" type="image/icon" href="# {request.contextPath}/favicon.ico"/>-->
+    </h:head>
+
+    <h:body>
+
+        <p:layout fullPage="true" resizeTitle="true" >  
+
+            <p:layoutUnit position="north" id="north" >  
+
+                <f:facet name="header">
+                    <b:navBar brand="Brand" brandHref="#" inverse="true">
+                        <b:navbarLinks>
+                            <b:navLink value="Home" href="#"></b:navLink>
+                            <b:navLink value="Link" href="#"></b:navLink>
+                            <b:navLink value="Link" href="#"></b:navLink>
+                        </b:navbarLinks>
+                    </b:navBar>
+                </f:facet>
+
+                <h:form id="headerForm">
+                </h:form>
+            </p:layoutUnit>  
+
+            <p:layoutUnit position="center" id="content" >
+
+                <h:form prependId="false" id="mainForm">
+                    <b:messages />
+
+                    <!--<ui:insert name="content" />-->
+
+                    <p:confirmDialog global="true" showEffect="fade" hideEffect="fade" >
+                        <p:commandButton value="Sim" type="button" styleClass="ui-confirmdialog-yes" icon="fa fa-check" />
+                        <p:commandButton value="Não" type="button" styleClass="ui-confirmdialog-no" icon="fa fa-close" />
+                    </p:confirmDialog>
+
+                </h:form>
+
+            </p:layoutUnit>
+            <p:layoutUnit position="south" resizable="false" closable="false"
+                          collapsible="false">
+                <f:facet name="header">
+                    DB-VERSION - <i>TODOS OS DIREITOS RESERVADOS</i>
+                </f:facet>
+            </p:layoutUnit>
+
+        </p:layout> 
+
+    </h:body>
+
+</html>
